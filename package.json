@@ -1,0 +1,24 @@
+{
+  "name": "req-header-service",
+  "version": "1.0.0",
+  "description": "A simple API micro-service to parse data about your user agent",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmdaniels/req-header-service.git"
+  },
+  "author": "cmdaniels",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cmdaniels/req-header-service/issues"
+  },
+  "homepage": "https://github.com/cmdaniels/req-header-service#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "serve-favicon": "^2.3.0"
+  }
+}
