@@ -16,7 +16,15 @@ app.get('/', function(req, res) {
 });
 
 app.get('/whoami', function(req, res) {
-  res.json({});
+  var languageStr = req.headers['accept-language'];
+  var softwareStr = req.headers['user-agent'];
+  var languageSubStr = languageStr.substring(0, languageStr.indexOf(','));
+  var softwareSubStr = softwareStr.substring(softwareStr.indexOf('(') + 1, softwareStr.indexOf(')'));
+  res.json({
+    ipaddress: req.connection.remoteAddress,
+    language: languageSubStr,
+    software: softwareSubStr
+  });
 });
 
 // Server initialization
